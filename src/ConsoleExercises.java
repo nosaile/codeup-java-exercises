@@ -33,9 +33,9 @@ public class ConsoleExercises {
         String word3 = scanner.nextLine();
         System.out.printf("%s%n%s%n%s%n", word, word2, word3);
 
-          System.out.println("Enter a sentence...");
-          String sentence = scanner.nextLine();
-          System.out.printf("%s%n", sentence);
+        System.out.println("Enter a sentence...");
+        String sentence = scanner.nextLine();
+        System.out.printf("%s%n", sentence);
 
         System.out.println("Enter the width of the room you are currently in...");
         int width = parseInt(scanner.nextLine());

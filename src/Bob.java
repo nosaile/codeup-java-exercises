@@ -14,13 +14,15 @@ public class Bob {
                 System.out.println("Bob says, \"Suuuuuure...\"");
             } else if (userResponse.endsWith("!")) {
                 System.out.println("Bob says, \"Whoa man chilllll...\"");
-            } else if (userResponse.equals("")) {
+            } else if (userResponse.isBlank()) {
                 System.out.println("Bob says, \"Fine, be that way...\"");
-            } else {
+            } else{
                 System.out.println("Bob says, \"Whatever bro...\"");
-            }
+            }if (userResponse.contains("goodbye")) {
+            continueRunningConvo = false;
 
 
-        } while (true);
+        }
+        }while (continueRunningConvo);
     }
 }

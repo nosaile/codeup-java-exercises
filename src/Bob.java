@@ -6,23 +6,28 @@ public class Bob {
         Scanner scanner = new Scanner(System.in);
 
         boolean continueRunningConvo;
+        System.out.println("You have stumbled across Bob's path, you should say something to him....");
         do {
-            System.out.println("Bob approaches you, what will you say to him....");
+
             String userResponse = scanner.nextLine();
             continueRunningConvo = true;
             if (userResponse.endsWith("?")) {
                 System.out.println("Bob says, \"Suuuuuure...\"");
+                System.out.println("What is your response?");
             } else if (userResponse.endsWith("!")) {
                 System.out.println("Bob says, \"Whoa man chilllll...\"");
+                System.out.println("What is your response?");
             } else if (userResponse.isBlank()) {
                 System.out.println("Bob says, \"Fine, be that way...\"");
-            } else{
+                System.out.println("What is your response?");
+            } else if (userResponse.contains("goodbye")) {
+                System.out.println("Bob says, \"See if I even care man...\"");
+                System.out.println("Bob is now slinking away as he has become annoyed with this dialogue.");
+                continueRunningConvo = false;
+            } else {
                 System.out.println("Bob says, \"Whatever bro...\"");
-            }if (userResponse.contains("goodbye")) {
-            continueRunningConvo = false;
-
-
-        }
-        }while (continueRunningConvo);
+                System.out.println("What is your response?");
+            }
+        } while (continueRunningConvo);
     }
 }

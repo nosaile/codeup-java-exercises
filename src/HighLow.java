@@ -8,7 +8,7 @@ public class HighLow {
         int result = (int) (Math.random() * 100 + 1);
 
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 1; i < 11; i++) {
             System.out.println("Please pick a number between 1 and 100...");
             int userInput = scanner.nextInt();
 
@@ -23,7 +23,7 @@ public class HighLow {
                 break;
             }
 
-
+            System.out.println("This was your: " + i + " attempt.");
 
 
         }

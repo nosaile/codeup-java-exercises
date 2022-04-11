@@ -5,30 +5,29 @@ public class HighLow {
 
     public static void main(String[] args) {
 
-        System.out.print(userEntry());
-    }
+        int result = (int) (Math.random() * 100 + 1);
 
-    public static int randNum() {
-//
-        return (int) (Math.random() * 100 + 1);
 
-    }
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Please pick a number between 1 and 100...");
+            int userInput = scanner.nextInt();
 
-    public static String userEntry() {
-        System.out.println("Please pick a number between 1 and 100...");
-        int userInput = scanner.nextInt();
-        if (userInput > randNum()){
-            System.out.print("Number is Lower than what you guessed...");
-            userEntry();
-        }else if (userInput < randNum()){
-            System.out.print("Number is higher than what you guessed...");
-            userEntry();
-        }else {
-            System.out.print("DING DING DING WE HAVE A WINNER!!!");
+            if (userInput > result) {
+                System.out.print("Number is Lower than what you guessed...");
+
+            } else if (userInput < result) {
+                System.out.print("Number is higher than what you guessed...");
+
+            } else if (userInput == result){
+                System.out.print("DING DING DING WE HAVE A WINNER!!!");
+                break;
+            }
+
+
+
+
         }
-
-
-
-        return null;
     }
+
+
 }

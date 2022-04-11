@@ -4,30 +4,35 @@ public class MethodsExercises {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println(addition(1, 1));
-        System.out.println(subtraction(2, 1));
-        System.out.println(multiplication(2, 2));
-        System.out.println(division(2, 2));
+//        System.out.println(addition(1, 1));
+//        System.out.println(subtraction(2, 1));
+//        System.out.println(multiplication(2, 2));
+//        System.out.println(division(2, 2));
+        System.out.println(modulus(19,8));
 //        System.out.println(getInteger(1, 10));
 //        System.out.println(factorial(1, 10));
-        System.out.println(rollDice());
+//        System.out.println(rollDice());
 
     }
 
-    public static int addition(int a, int b) {
-        return a + b;
-    }
+//    public static int addition(int a, int b) {
+//        return a + b;
+//    }
+//
+//    public static int subtraction(int a, int b) {
+//        return a - b;
+//    }
+//
+//    public static int multiplication(int a, int b) {
+//        return a * b;
+//    }
+//
+//    public static int division(int a, int b) {
+//        return a / b;
+//    }
 
-    public static int subtraction(int a, int b) {
-        return a - b;
-    }
-
-    public static int multiplication(int a, int b) {
-        return a * b;
-    }
-
-    public static int division(int a, int b) {
-        return a / b;
+    public static int modulus(int a, int b){
+        return a % b;
     }
 
 //    public static int getInteger(int min, int max) {

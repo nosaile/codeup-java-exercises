@@ -10,7 +10,7 @@ public class MethodsExercises {
 //        System.out.println(division(2, 2));
         System.out.println(modulus(19,8));
 //        System.out.println(getInteger(1, 10));
-//        System.out.println(factorial(1, 10));
+        System.out.println(factorial(1, 10));
 //        System.out.println(rollDice());
 
     }
@@ -56,29 +56,29 @@ public class MethodsExercises {
 //        return userInput;
 //    }
 //
-//    public static long factorial(int min, int max) {
-//        long result = 1;
-//
-//        System.out.println("Enter an integer between 1 and 10...");
-//        int userEntry = scanner.nextInt();
-//        if (userEntry > max || userEntry < min) {
-//            System.out.println("NO");
-//            return factorial(min, max);
-//        }
-//        for (int i = 1; i <= userEntry; i++) {
-//            result *= i;
-//        }
-//        System.out.println(result);
-//        System.out.println("Would you like to continue? ");
-//        String userAnswer = scanner.next();
-//        if (userAnswer.equalsIgnoreCase("y")) {
-//            return factorial(min, max);
-//        } else
-//            System.out.println("goodbye! your final result was: ");
-//        return result;
-//
-//
-//    }
+    public static long factorial(int min, int max) {
+        long result = 1;
+
+        System.out.println("Enter an integer between 1 and 10...");
+        int userEntry = scanner.nextInt();
+        if (userEntry > max || userEntry < min) {
+            System.out.println("NO");
+            return factorial(min, max);
+        }
+        for (int i = 1; i <= userEntry; i++) {
+            result *= i;
+        }
+        System.out.println(result);
+        System.out.println("Would you like to continue? (y/n)");
+        String userAnswer = scanner.next();
+        if (userAnswer.equalsIgnoreCase("y")) {
+            return factorial(min, max);
+        } else
+            System.out.println("goodbye! your final result was: ");
+        return result;
+
+
+    }
 
     public static int rollDice() {
 

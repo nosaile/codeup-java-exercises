@@ -12,10 +12,10 @@ public class HighLow {
             int userInput = scanner.nextInt();
 
             if (userInput > result) {
-                System.out.print("Number is Lower than what you guessed...please choose again...");
+                System.out.print("Number is Lower than "+ userInput + ", please choose again...");
 
             } else if (userInput < result) {
-                System.out.print("Number is higher than what you guessed...please choose again...");
+                System.out.print("Number is higher than "+ userInput + ", please choose again...");
 
             } else {
                 System.out.print("DING DING DING WE HAVE A WINNER!!! "+ result + " was the correct number!");

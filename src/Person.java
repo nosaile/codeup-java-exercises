@@ -3,7 +3,7 @@ public class Person {
 
     public String getName() {
 //TODO: return the person's name
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -13,13 +13,16 @@ public class Person {
 
     public void sayHello() {
 //TODO: print a message to the console using the person's name
-        System.out.print("Hello there, " + name);
+        System.out.print("Hello there, " + this.name + "!");
+    }
+    public Person(String name){
+        this.name = name;
     }
 
     public static void main(String[] args) {
-        Person person = new Person();
-        person.setName("Chris");
-        System.out.println(person.getName());
+        Person person = new Person("Chris");
+        person.setName(person.name);
+        person.getName();
         person.sayHello();
 
 //        Person person1 = new Person();

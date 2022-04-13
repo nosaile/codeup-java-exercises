@@ -31,7 +31,7 @@ public class Input {
     }
 
     public int getInt() {
-        System.out.println("Give me an integer within the range of the min and max...");
+        System.out.println("Give me an number...");
 
         return scanner.nextInt();
     }
@@ -48,7 +48,7 @@ public class Input {
     }
 
     public double getDouble() {
-        System.out.println("Give me an decimal within the range of the min and max...");
+        System.out.println("Give me a number...");
 
         return scanner.nextDouble();
     }

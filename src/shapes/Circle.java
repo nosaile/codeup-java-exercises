@@ -1,11 +1,15 @@
 package shapes;
 
+import util.Input;
+
 public class Circle {
     private Double radius;
 
 
     public Circle(double radius) {
-        this.radius = radius;
+        Input inputRadius = new Input();
+        inputRadius.getDouble();
+        this.radius = inputRadius.getDouble();
 
 
     }

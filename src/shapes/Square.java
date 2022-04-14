@@ -40,11 +40,11 @@ public class Square extends Rectangle {
 //        System.out.println(newSquare.side(5));
 //
 //    }
-
+@Override
     public int getArea() {
         return side * side;
     }
-
+@Override
     public int getPerimeter() {
         return side * 4;
     }

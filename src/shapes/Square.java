@@ -3,11 +3,11 @@ package shapes;
 //
 public class Square extends Rectangle {
 
-    protected int side;
+
 
     public Square(int side) {
         super(side, side);
-        this.side = side;
+
 
     }
 
@@ -42,11 +42,11 @@ public class Square extends Rectangle {
 //    }
 @Override
     public int getArea() {
-        return side * side;
+        return super.length * super.length;
     }
 @Override
     public int getPerimeter() {
-        return side * 4;
+        return super.length * 4;
     }
 
 

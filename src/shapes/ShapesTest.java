@@ -14,7 +14,7 @@ public class ShapesTest extends Rectangle {
         System.out.println(box2.getArea());
         System.out.println(box2.getPerimeter());
 
-        Square sqr1 = new Square(9);
+        Square sqr1 = new Square(3);
         System.out.println(sqr1.getArea());
         System.out.println(sqr1.getPerimeter());
 

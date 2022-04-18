@@ -21,7 +21,7 @@ public class ShapesTest {
 //        System.out.println(rec1.getPerimeter());
 //        System.out.println(rec1.getArea());
 //
-
+//
         myShape = new Rectangle(3,4);
         System.out.println(myShape.getArea());
         System.out.println(myShape.getPerimeter());

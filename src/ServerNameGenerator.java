@@ -7,19 +7,15 @@ public class ServerNameGenerator {
 
 
 
-     public static String randomAdjs(String[] adjs){
-         int rnd = new Random().nextInt(adjs.length);
-         return adjs[rnd];
+     public static String randomWords(String[] array){
+         int rnd = new Random().nextInt(array.length);
+         return array[rnd];
      }
 
-     public static String randomNouns(String[] nouns){
-         int rnd = new Random().nextInt(nouns.length);
-         return nouns[rnd];
-     }
 
     public static void main(String[] args) {
 
-        System.out.println(randomAdjs(adjs)+ "-" + randomNouns(nouns));
+        System.out.println("Here is your server name:\n"+randomWords(adjs)+ "-" + randomWords(nouns));
 
     }
 }

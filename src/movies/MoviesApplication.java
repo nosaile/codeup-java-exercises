@@ -9,7 +9,14 @@ public static void filterMovie(){
     int choice = 0;
     Movie[] newMovie = MoviesArray.findAll();
     do {
-        System.out.println("Please select one of the following options...\n1: view all movies\n2: view animated movies\n3: view drama movies\n4: view horror movies\n5: view sci-fi movies\n6: view musical movies\n7: exit");
+        System.out.println("Please select one of the following options...\n" +
+                "1: view all movies\n" +
+                "2: view animated movies\n" +
+                "3: view drama movies\n" +
+                "4: view horror movies\n" +
+                "5: view sci-fi movies\n" +
+                "6: view musical movies\n" +
+                "7: exit");
         choice = userResponse.getInt("Enter a choice...");
         if (choice == 1) {
             for (int i = 0; i < newMovie.length; i++) {

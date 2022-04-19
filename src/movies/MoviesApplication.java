@@ -8,7 +8,6 @@ public static void filterMovie(){
     Input userResponse = new Input();
     int choice = 0;
     Movie[] newMovie = MoviesArray.findAll();
-    boolean continueToRun = true;
     do {
         System.out.println("Please select one of the following options...\n1: view all movies\n2: view animated movies\n3: view drama movies\n4: view horror movies\n5: view sci-fi movies\n6: view musical movies\n7: exit");
         choice = userResponse.getInt("Enter a choice...");

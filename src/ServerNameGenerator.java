@@ -3,7 +3,7 @@ import java.util.Random;
 public class ServerNameGenerator {
 
      public static String[] adjs = {"Nice", "Funny", "Cool", "Mean", "Awesome", "Sad", "Amazing", "Rude", "Jealous", "Brilliant"};
-     public static String[] nouns = {"Chicago", "New York", "Dallas", "Austin", "Obama", "Tower", "Lubbock", "Miami", "Truck", "Couch"};
+     public static String[] nouns = {"Car", "Motorboat", "Statue", "Deck", "Cannon", "Tower", "Guardrail", "Cup", "Truck", "Couch"};
 
 
 

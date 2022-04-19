@@ -20,7 +20,7 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-        int userInt = getInt();
+        int userInt = getInt("5");
         if(userInt < max && userInt > min){
             System.out.println("Within target range, your number was");
             return userInt;
@@ -30,8 +30,8 @@ public class Input {
         return getInt(min, max);
     }
 
-    public int getInt() {
-        System.out.println("Give me an number...");
+    public int getInt(String rand) {
+        System.out.println(rand);
 
         return scanner.nextInt();
     }

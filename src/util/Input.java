@@ -36,7 +36,7 @@ public class Input {
             return Integer.parseInt(getString());
 
         }catch(Exception e){
-            System.out.println("Attempted return Integer.valueOf(getString()); but failed...");
+            System.out.println("Integer exception here");
             return getInt(rand);
         }
 
@@ -61,7 +61,7 @@ public class Input {
             return Double.parseDouble(getString());
 
         }catch(NumberFormatException e){
-            System.out.println("DUB exception");
+            System.out.println("Double exception here");
             return getDouble();
         }
 

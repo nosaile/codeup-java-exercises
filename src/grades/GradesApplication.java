@@ -47,8 +47,8 @@ public class GradesApplication {
                 }
             });
             String userWrongAnswer = scanner.nextLine();
-            if (!Objects.equals(userAnswer, userWrongAnswer)) {
-                System.out.println("--- NO USER FOUND ---");
+            if (Objects.equals(userAnswer, userWrongAnswer)) {
+                System.out.println("--- INVALID USER ---");
             }
 
 

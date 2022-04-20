@@ -18,40 +18,59 @@ public class GradesApplication {
         student2.addGrade(50);
         student2.addGrade(75);
         Student student3 = new Student("Bobby");
-        student3.addGrade(55);
         student3.addGrade(50);
-        student3.addGrade(32);
+        student3.addGrade(50);
+        student3.addGrade(50);
         Student student4 = new Student("Jimmy");
         student4.addGrade(100);
-        student4.addGrade(50);
-        student4.addGrade(75);
+        student4.addGrade(0);
+        student4.addGrade(85);
         HashMap<String, String> students = new HashMap<>();
-        students.put("nosaile12", String.valueOf(student1.getName()));
-        students.put("topherson95", String.valueOf(student2.getName()));
-        students.put("bobby34", String.valueOf(student3.getName()));
-        students.put("jimmy67", String.valueOf(student4.getName()));
-        String userContinue;
+        students.put("nosaile", student1.getName() + " | Grade avg: " + student1.getGradeAverage());
+        students.put("topherson", student2.getName() + " | Grade avg: " + student2.getGradeAverage());
+        students.put("bobby34", student3.getName() + " | Grade avg: " + student3.getGradeAverage());
+        students.put("jjiimmyy", student4.getName() + " | Grade avg: " + student4.getGradeAverage());
+        String userContinue = null;
         do {
-            System.out.println("Welcome, \n" +
+            System.out.println(
                     "Here are the github usernames of your students...\n" +
-                    "What student would you like to see more information on?\n" +
-                    students.keySet());
-            String userAnswer = scanner.nextLine();
-            students.entrySet().forEach(entry -> {
-                if (Objects.equals(userAnswer, entry.getKey()))
-                    System.out.println("Name: " + entry.getValue());
+                            students.keySet() +
+                            "\n"+
+                            "Which username would you like to see more information on?\n");
+            String userAnswer = scanner.next();
+
+
+            students.forEach((key, value) -> {
+                if (Objects.equals(userAnswer, key)) {
+                    System.out.println("Name: " + value);
+                    System.out.println("--- ignore message below ---");
+                }
             });
-            System.out.println("Would you like to search again? [y/n]");
-            userContinue = scanner.nextLine();
-            if (userContinue.equalsIgnoreCase("y")) {
-                userContinue = String.valueOf(true);
-            } else if (userContinue.equalsIgnoreCase("n")) {
-                System.out.println("Goodbye :)");
-                userContinue = String.valueOf(false);
+            String userWrongAnswer = scanner.nextLine();
+            if (!Objects.equals(userAnswer, userWrongAnswer)) {
+                System.out.println("--- NO USER FOUND ---");
             }
 
 
-        } while (userContinue == String.valueOf(true));
+
+            String userYESNO = null;
+            do {
+                System.out.println("Would you like to search again? [y/n]");
+                userContinue = scanner.nextLine();
+                if (userContinue.equalsIgnoreCase("y")) {
+                    userYESNO = String.valueOf(false);
+                    userContinue = String.valueOf(true);
+                } else if (userContinue.equalsIgnoreCase("n")) {
+                    System.out.println("Goodbye :)");
+                    userYESNO = String.valueOf(false);
+                    userContinue = String.valueOf(false);
+                }else{
+                    System.out.println("INVALID RESPONSE");
+                    userYESNO = String.valueOf(true);
+                }
+            }while(userYESNO == String.valueOf(true));
+
+        } while (userContinue.equals(String.valueOf(true)));
 
     }
 }

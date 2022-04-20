@@ -11,7 +11,7 @@ public class Input {
 
 
     public String getString() {
-        System.out.println("Do you say yes or no?");
+        System.out.println("Continue? [y/n]");
         return scanner.nextLine();
     }
 
@@ -32,8 +32,16 @@ public class Input {
 
     public int getInt(String rand) {
         System.out.println(rand);
+        try{
+            return Integer.parseInt(getString());
 
-        return scanner.nextInt();
+        }catch(Exception e){
+            System.out.println("Attempted return Integer.valueOf(getString()); but failed...");
+            return getInt(rand);
+        }
+
+
+
     }
 
     public double getDouble(double min, double max) {
@@ -49,8 +57,16 @@ public class Input {
 
     public double getDouble() {
         System.out.println("Give me a number...");
+        try{
+            return Double.parseDouble(getString());
 
-        return scanner.nextDouble();
+        }catch(NumberFormatException e){
+            System.out.println("DUB exception");
+            return getDouble();
+        }
+
+
+
     }
 
 

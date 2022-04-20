@@ -1,7 +1,6 @@
 package grades;
 
 import java.util.HashMap;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class GradesApplication {
@@ -25,35 +24,41 @@ public class GradesApplication {
         student4.addGrade(100);
         student4.addGrade(0);
         student4.addGrade(85);
-        HashMap<String, String> students = new HashMap<>();
-        students.put("nosaile", student1.getName() + " | Grade avg: " + student1.getGradeAverage());
-        students.put("topherson", student2.getName() + " | Grade avg: " + student2.getGradeAverage());
-        students.put("bobby34", student3.getName() + " | Grade avg: " + student3.getGradeAverage());
-        students.put("jjiimmyy", student4.getName() + " | Grade avg: " + student4.getGradeAverage());
+        HashMap<String, Student> students = new HashMap<>();
+        students.put("nosaile", student1);
+        students.put("topherson", student2);
+        students.put("bobby34", student3);
+        students.put("jjiimmyy", student4);
         String userContinue = null;
+        String userYESNO = null;
         do {
             System.out.println(
                     "Here are the github usernames of your students...\n" +
                             students.keySet() +
                             "\n"+
-                            "Which username would you like to see more information on?\n");
-            String userAnswer = scanner.next();
-
-
-            students.forEach((key, value) -> {
-                if (Objects.equals(userAnswer, key)) {
-                    System.out.println("Name: " + value);
-
-                }
-            });
-            String userWrongAnswer = scanner.nextLine();
-            if (Objects.equals(userAnswer, userWrongAnswer)) {
-                System.out.println("--- INVALID USER ---");
+                            "Which username would you like to see more information on?");
+            String userAnswer = scanner.nextLine();
+//            String userWrongAnswer = scanner.nextLine();
+//            students.forEach((key, value) -> {
+//                if (students.containsKey(userAnswer) == students.containsValue()) {
+//                    System.out.println("Student Name: " +
+//                            value.getName() + " | Grade Avg: " +
+//                            value.getGradeAverage() );
+//
+//                }
+//            });
+//            if (!Objects.equals(userWrongAnswer, userAnswer)){
+//                System.out.println("--- INVALID USER ---");
+//            }
+            if (students.containsKey(userAnswer)){
+                Student chosenOne = students.get(userAnswer);
+                System.out.println("Student Name: " + chosenOne.getName() + " | Grade Avg: " + chosenOne.getGradeAverage());
+            }else{
+                System.out.println("INVALID USERNAME " + userAnswer);
             }
 
 
 
-            String userYESNO = null;
             do {
                 System.out.println("Would you like to search again? [y/n]");
                 userContinue = scanner.nextLine();

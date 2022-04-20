@@ -43,7 +43,7 @@ public class GradesApplication {
             students.forEach((key, value) -> {
                 if (Objects.equals(userAnswer, key)) {
                     System.out.println("Name: " + value);
-                    System.out.println("--- ignore message below ---");
+
                 }
             });
             String userWrongAnswer = scanner.nextLine();

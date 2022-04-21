@@ -1,28 +1,16 @@
 public class Warmup {
 
 
+    private static String backwards = "";
 
-
-
-
-        public static boolean isPalindrome(String text) {
-            String clean = text.replaceAll("\\s+", "").toLowerCase();
-            int length = clean.length();
-            int forward = 0;
-            int backward = length - 1;
-            while (backward > forward) {
-                char forwardChar = clean.charAt(forward++);
-                char backwardChar = clean.charAt(backward--);
-                if (forwardChar != backwardChar)
-                    return false;
-            }
-            return true;
+    public static boolean isPalindrome(String isIt) {
+        for (int i = (isIt.length() - 1); i >= 0; --i) {
+            backwards = backwards + isIt.charAt(i);
         }
+        return isIt.equals(backwards);
+    }
 
     public static void main(String[] args) {
-
         System.out.println(isPalindrome("radar"));
-
-
     }
 }

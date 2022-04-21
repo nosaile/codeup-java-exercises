@@ -37,6 +37,8 @@ public class Input {
 
         }catch(Exception e){
             System.out.println("Integer exception here");
+            System.out.println(e.getMessage());
+            e.printStackTrace();
             return getInt(rand);
         }
 
@@ -62,6 +64,8 @@ public class Input {
 
         }catch(NumberFormatException e){
             System.out.println("Double exception here");
+            System.out.println(e.getMessage());
+            e.printStackTrace();
             return getDouble();
         }
 
